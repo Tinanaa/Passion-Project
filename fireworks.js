@@ -117,7 +117,7 @@ class Fireworks {
 
   start() {
     this.loop()
-    // 60 帧就用 requestAnimationFrame，否则用 setTimeout
+
     const animationFunction = this._useAnimationFrame ? requestAnimationFrame : setTimeout
     const interval = 16.67 * (60 / this.fps)
     this.render(animationFunction, interval)
