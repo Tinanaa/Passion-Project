@@ -5,11 +5,11 @@ class Fireworks {
   
   ctx = null 
   offScreenCtx = null 
-  fps = 60 
-  fireworks = [] 
-  fireworkCount = 8 
-  fireworkInterval = 400 
-  fireworkColors = DEFAULT_COLORS
+  fps = 60  //Frame rate 
+  fireworks = [] //Firework array
+  fireworkCount = 8  //Number of fireworks
+  fireworkInterval = 400  // Firework explosion interval
+  fireworkColors = DEFAULT_COLORS  // Array of fireworks colors with random values
   particleOptions = { 
     size: 15, 
     speed: 15,
@@ -261,11 +261,6 @@ class Particle {
     gradient.addColorStop(1, shadowColor)
 
     ctx.fillStyle = gradient
-
-    // ctx.beginPath()
-    // ctx.arc(x, y, size, 0, Math.PI * 2, true)
-    // ctx.closePath()
-    // ctx.fill()
 
     ctx.fillRect(x, y, size, size)
 
